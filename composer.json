@@ -1,0 +1,19 @@
+{
+    "name": "thoughtco/restrict-fields",
+    "autoload": {
+        "psr-4": {
+            "Thoughtco\\RestrictFields\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Restrict Fields",
+            "description": "Restrict fields in Statamic to specific users or groups."
+        },
+        "laravel": {
+            "providers": [
+                "Thoughtco\\RestrictFields\\ServiceProvider"
+            ]
+        }
+    }
+}
