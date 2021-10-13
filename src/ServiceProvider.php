@@ -1,14 +1,12 @@
 <?php
 
-namespace Thoughtco\RestrictFields;
+namespace Thoughtco\StatamicRestrictFields;
 
 use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    protected $listen = [
-        'Statamic\Events\EntryBlueprintFound' => [
-            Listeners\RestrictFieldsListener::class,
-        ],
+    protected $scripts = [
+        __DIR__.'/../resources/js/RestrictConditions.js'
     ];
 }

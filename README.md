@@ -1,6 +1,6 @@
 # Restrict Fields
 
-> Restrict Fields is a Statamic addon that allows you to restrict fields in the control panel to certain users or groups
+> Restrict Fields is a Statamic addon that allows you to restrict fields in the control panel to certain users, groups or roles.
 
 ## How to Install
 
@@ -12,19 +12,19 @@ composer require thoughtco/statamic-restrict-fields
 
 ## How to Use
 
-Once installed, add an array of `restrict_to_users` or `restrict_to_groups` to your blueprint YAML.
+Once installed, 3 new custom condition methods become available to use:
 
-e.g.
+### restrictUsers
 
-```
-        handle: template
-        field:
-          type: template
-          display: Template
-          localizable: true
-          restrict_to_users:
-            - "a9368c46c-adfc-43c3-b6b5-6a552f60187c"
-            - "b9368c46c-adfc-43c3-b6b5-6a552f60187d"
-```
+Use with a value in the format:
+`restrictUsers:user_id_1,user_id_2`
 
-Note: `restrict_to_users` takes preference over `restrict_to_groups` so if both are present, groups will be ignored.
+### restrictGroups
+
+Use with a value in the format:
+`restrictGroups:group_slug_1,group_slug_2`
+
+### restrictRoles
+
+Use with a value in the format:
+`restrictRoles:role_slug_1,role_slug_2`
