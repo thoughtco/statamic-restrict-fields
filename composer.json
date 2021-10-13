@@ -1,5 +1,5 @@
 {
-    "name": "thoughtco/restrict-fields",
+    "name": "thoughtco/statamic-restrict-fields",
     "autoload": {
         "psr-4": {
             "Thoughtco\\RestrictFields\\": "src"
