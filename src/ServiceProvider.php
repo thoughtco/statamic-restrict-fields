@@ -1,6 +1,6 @@
 <?php
 
-namespace Thoughtco\StatamicRestrictFields;
+namespace Thoughtco\RestrictFields;
 
 use Statamic\Providers\AddonServiceProvider;
 
