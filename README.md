@@ -28,3 +28,5 @@ Use with a value in the format:
 
 Use with a value in the format:
 `restrictRoles:role_slug_1,role_slug_2`
+
+> Fields will be always visible to Super Admins for all three types of restrictions.
