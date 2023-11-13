@@ -4,9 +4,15 @@ Statamic.$conditions.add('restrictUsers', function ({ target, params, store, sto
 });
 
 Statamic.$conditions.add('restrictGroups', function ({ target, params, store, storeName, values }) {
-    return params.filter(value => Statamic.user.groups.includes(value)).length > 0;
+    return (
+        (params.includes('super') && Statamic.user.super) ||
+        (params.filter(value => Statamic.user.groups.includes(value)).length > 0)
+    );
 });
 
 Statamic.$conditions.add('restrictRoles', function ({ target, params, store, storeName, values }) {
-    return params.filter(value => Statamic.user.roles.includes(value)).length > 0;
+    return (
+        (params.includes('super') && Statamic.user.super) ||
+        (params.filter(value => Statamic.user.roles.includes(value)).length > 0)
+    );
 });
