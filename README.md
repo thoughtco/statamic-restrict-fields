@@ -28,3 +28,9 @@ Use with a value in the format:
 
 Use with a value in the format:
 `restrictRoles:role_slug_1,role_slug_2`
+
+### Including superadmins
+
+You may pass `super` to the `restrictGroups` and `restrictRoles` condition methods in order to include superadmins.
+
+Example: `restrictGroups:super,group_slug_1,group_slug_2`
